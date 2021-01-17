@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-container {
+  width: 820px;
+  height: 480px;
+  background: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 20px 53px -24px black;
+  box-shadow: 0px 20px 53px -24px black;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.card-container::before {
+  content: "";
+  background-image: url("../images/illustration-box-desktop.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  -webkit-transform: translate(-430px, 42px) scale(0.85);
+          transform: translate(-430px, 42px) scale(0.85);
+  width: 200px;
+  height: 180px;
+  z-index: 99;
+}
+
+.illustration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.illustration .woman-desktop {
+  position: absolute;
+  max-width: 100%;
+  left: -70px;
+}
+
+.illustration .pattern-desktop {
+  position: absolute;
+  z-index: -1;
+  -webkit-transform: translate(-355px, -80px);
+          transform: translate(-355px, -80px);
+}
+
+.content {
+  width: 50%;
+  min-height: 100%;
+  padding-top: 140px;
+}
+
+.content h1 {
+  color: #1d1e35;
+  font-size: 3rem;
+  margin: 0 0 40px 0;
+}
+
+.accordion-wrapper {
+  width: 90%;
+}
+
+.accordion {
+  width: 80%;
+  text-align: left;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  color: #1d1e35;
+  background: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.accordion span {
+  float: right;
+}
+
+.accordion:hover {
+  color: #f47c57;
+}
+
+.accordion.active {
+  font-weight: 700;
+}
+
+.accordion.active span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.text {
+  width: 85%;
+  max-height: 0;
+  font-size: 1.1rem;
+  overflow: hidden;
+  color: #787887;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  line-height: 15px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #e7e7e9;
+  width: 80%;
+  float: left;
+  margin: 10px 0;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+@media (max-width: 768px) and (min-width: 680px) {
+  .card-container {
+    width: 680px;
+    height: 380px;
+  }
+  .card-container::before {
+    -webkit-transform: translate(-350px, 38px) scale(0.55);
+            transform: translate(-350px, 38px) scale(0.55);
+  }
+  .illustration .pattern-desktop {
+    -webkit-transform: translate(-285px, -50px) scale(0.8);
+            transform: translate(-285px, -50px) scale(0.8);
+  }
+  .content {
+    padding-top: 90px;
+  }
+  .content h1 {
+    font-size: 2.4rem;
+    margin: 0 0 20px 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .card-container {
+    width: 320px;
+    min-height: 490px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 60px;
+  }
+  .card-container::before {
+    content: "";
+    background-image: url("../images/illustration-woman-online-mobile.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    -webkit-transform: translate(-6%, -140%) scale(0.85);
+            transform: translate(-6%, -140%) scale(0.85);
+    width: 266px;
+    height: 180px;
+    z-index: 99;
+  }
+  .card-container::after {
+    content: "";
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    -webkit-transform: translate(-2%, -190%) scale(0.85);
+            transform: translate(-2%, -190%) scale(0.85);
+    width: 240px;
+    height: 104px;
+    z-index: 99;
+  }
+  .illustration {
+    width: 100%;
+    min-height: 40%;
+  }
+  .illustration .desktop-only {
+    display: none;
+  }
+  .content {
+    width: 100%;
+    min-height: 420px;
+    padding-top: 0px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content h1 {
+    color: #1d1e35;
+    font-size: 2.4rem;
+    position: absolute;
+    top: 0;
+    margin: -15px 0 0 0;
+  }
+  .accordion-wrapper {
+    width: 100%;
+    padding-left: 60px;
+    margin-top: -50px;
+  }
+  .accordion {
+    width: 80%;
+    text-align: left;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    color: #1d1e35;
+    background: none;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .text {
+    width: 85%;
+    max-height: 0;
+    font-size: 1.1rem;
+    overflow: hidden;
+    color: #787887;
+    -webkit-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+    line-height: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
